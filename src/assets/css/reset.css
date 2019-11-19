@@ -1,0 +1,151 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+html, body ,#app{
+    width: 100%;
+    min-height: 100%;
+    background-color: #f5f5f5;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.border-top-1px{
+    border-top: 1px solid #f5f5f5;
+}
+.border-bottom-1px{
+    border-bottom: 1px solid #f5f5f5;
+}
+.mt15{
+    margin-top: 0.3rem;
+}
+/* 浮动 */
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    overflow: hidden;
+    zoom:1;
+}
+.fr{float: right;}
+.fl{float: left;}
+.muato{margin-left:auto;margin-right: auto;}
+
+.input_border_none.van-cell::after{
+    border-bottom: none!important;
+}
+.white .van-field__control{
+    color: #ffffff;
+}
+.van-button{
+    user-select: none;
+}
+
+/*顶部导航样式*/
+#app .van-nav-bar__title{
+    font-weight: bold;
+    font-size: 0.38rem;
+}
+#app .van-nav-bar{
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+#app .van-nav-bar i{
+    color: #000000;
+    font-size: 0.45rem;
+}
+#app .van-nav-bar.white i,#app .van-nav-bar.white .van-nav-bar__title{
+    color: #ffffff;
+}
+#app .van-nav-bar__left {
+    margin-left: -0.15rem;
+}
+/* 输入框padding:0 */
+.van-field_nopad.van-field{
+    padding: 0;
+}
+.van-field_nopad.van-field .van-field__control{
+    font-size: 0.32rem;
+}

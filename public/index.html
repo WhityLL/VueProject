@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Whity_VUE</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="Keywords" content="设计模式，demo等">
+  <meta name="description" content="设计模式，demo等">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+  <script src="https://globaljs.lishe.cn/js/jQuery1.8.3.min.js"></script>
+  <script src="https://m1.lishe.cn/static/common/js/common.js"></script>
+  <script src="https://globaljs.lishe.cn/js/global.static.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+
+  <script src="Observer.js"></script>
+
+  <script>
+    let spaUrl = location.href;
+  </script>
+
+  <script>
+    var html = document.documentElement;
+    html.style.maxWidth = 750 + 'px';
+    var whtml = html.getBoundingClientRect().width;
+    html.style.fontSize = whtml / 7.5 + "px";
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+      setTimeout(function () {
+        var html = document.documentElement;
+        html.style.maxWidth = 750 + 'px';
+        var whtml = html.getBoundingClientRect().width;
+        html.style.fontSize = whtml / 7.5 + "px";
+      }, 333)
+    }, false);
+  </script>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but sass-app doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

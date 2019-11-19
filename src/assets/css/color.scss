@@ -1,0 +1,12 @@
+$blue:#2151ED;
+.flexDiv {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 0.32rem;
+  background-color: #ffffff;
+  line-height: 1.2rem;
+  height: 1.2rem;
+}

@@ -1,0 +1,9 @@
+FROM registry.cn-shenzhen.aliyuncs.com/lishe/php:base
+maintainer lishe lishe@lishe.cn
+expose 80
+
+ENV LC_ALL zh_CN.utf8
+copy dist /usr/local/nginx/html
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ENTRYPOINT /opt/autorun.sh
