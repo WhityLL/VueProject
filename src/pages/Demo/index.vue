@@ -62,7 +62,6 @@
                 if (index == 5){
                     this.loadPage("pubsub_mode")
                 }
-<<<<<<< HEAD
             },
 
 
@@ -78,12 +77,10 @@
                 }, 3000);
 
                 this.togo(5);
-=======
 
                 if (index == 6){
                     this.loadPage("img_placeholder")
                 }
->>>>>>> 67c1d2ba9d36fbc19d06e83d00f73422a0e00142
             }
         }
     }
