@@ -64,6 +64,12 @@ const route = new Router({
             component: () => import( '@/pages/Demo/children/pubsub_mode'),
             meta: {title: "pubsub_mode"}
         },
+        {
+            path: '/img_placeholder',
+            name: 'img_placeholder',
+            component: () => import( '@/pages/Demo/children/img_placeholder'),
+            meta: {title: "img_placeholder"}
+        },
 
 
         {

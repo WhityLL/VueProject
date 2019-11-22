@@ -14,6 +14,9 @@
 
         <van-button type="default" @click="togo(5)">发布订阅模式</van-button>
 
+        <van-button type="default" @click="togo(6)">图片弱网占位</van-button>
+
+
     </div>
 </template>
 
@@ -55,6 +58,10 @@
 
                 if (index == 5){
                     this.loadPage("pubsub_mode")
+                }
+
+                if (index == 6){
+                    this.loadPage("img_placeholder")
                 }
             }
         }
