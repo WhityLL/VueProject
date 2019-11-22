@@ -16,6 +16,8 @@
 
         <van-button type="default" @click="publishMsg()">3s后发布一个消息，现在进入发布订阅模式页面</van-button>
 
+        <van-button type="default" @click="togo(6)">图片弱网占位</van-button>
+
     </div>
 </template>
 
@@ -60,6 +62,7 @@
                 if (index == 5){
                     this.loadPage("pubsub_mode")
                 }
+<<<<<<< HEAD
             },
 
 
@@ -75,6 +78,12 @@
                 }, 3000);
 
                 this.togo(5);
+=======
+
+                if (index == 6){
+                    this.loadPage("img_placeholder")
+                }
+>>>>>>> 67c1d2ba9d36fbc19d06e83d00f73422a0e00142
             }
         }
     }
