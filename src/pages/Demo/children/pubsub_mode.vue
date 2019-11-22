@@ -13,33 +13,41 @@
         <br><br>
         <p>订阅者A显示：{{subscribeA}}</p>
         <p>订阅者B显示：{{subscribeB}}</p>
+        <p>订阅者C显示：{{subscribeC}}</p>
 
     </div>
 </template>
 
 <script>
     
-    import PubSubCenter from "../../../../public/PubSub"
+    // import PubSubCenter from "../../../../public/PubSub"
     
     export default {
         name: "pubsub_mode",
         data(){
             return{
                 subscribeA: '',
-                subscribeB: ''
+                subscribeB: '',
+                subscribeC: ''
             }
         },
         created() {
             // 订阅了一个主题为AA的消息
             var that = this;
             // 订阅者A
-            PubSubCenter.subscribeMsg("AA", function (repsA) {
+            window.PubSubCenterInstance.subscribeMsg("AA", function (repsA) {
                 that.subscribeA = repsA.valueA;
             })
             // 订阅者B
-            PubSubCenter.subscribeMsg("AA", function (resp) {
+            window.PubSubCenterInstance.subscribeMsg("AA", function (resp) {
                 that.subscribeB = resp.valueB;
             })
+
+            // 订阅者C
+            window.PubSubCenterInstance.subscribeMsg("FromIndex", function (resp) {
+                that.subscribeC = resp.valueA + that.random(1, 100);
+            })
+
         },
         methods: {
             // 发布一个主题为AA消息
@@ -53,12 +61,12 @@
                 }
 
                 // 发布了一个主题为AA的消息
-                PubSubCenter.publishMsg("AA", msgData);
+                window.PubSubCenterInstance.publishMsg("AA", msgData);
             },
 
             // 发布一个没有订阅者的消息 
             publishMsg_NoSubscriber(){
-                PubSubCenter.publishMsg("CCC", {valueA: 1});
+                window.PubSubCenterInstance.publishMsg("CCC", {valueA: 1});
             },
 
             /**

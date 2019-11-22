@@ -14,10 +14,14 @@
 
         <van-button type="default" @click="togo(5)">发布订阅模式</van-button>
 
+        <van-button type="default" @click="publishMsg()">3s后发布一个消息，现在进入发布订阅模式页面</van-button>
+
     </div>
 </template>
 
 <script>
+
+    // import PubSubCenter from "../../../public/PubSub"
 
     export default {
         name: "index",
@@ -56,6 +60,21 @@
                 if (index == 5){
                     this.loadPage("pubsub_mode")
                 }
+            },
+
+
+            publishMsg(){
+                setTimeout(() => {
+                    // 发出通知 ，通知所有的观察者对象
+                    var msgData = {
+                        valueA: "Index发布过来的消息，主题为FromIndex"
+                    }
+
+                    // 发布了一个主题为AA的消息
+                    PubSubCenterInstance.publishMsg("FromIndex", msgData);
+                }, 3000);
+
+                this.togo(5);
             }
         }
     }
